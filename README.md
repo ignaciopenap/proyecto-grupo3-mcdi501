@@ -21,3 +21,33 @@
 | `03-evaluaciones/sumativa-1-analisis-exploratorio-inferencial/` | Cuaderno Jupyter (`Sumativa1_Framingham_Codigo.ipynb`), figuras y reporte de la **Evaluación Sumativa 1 (20 %)** |
 | `04-plantillas/word/` | Plantillas oficiales de informe en formato Word |
 | `data/raw/` | Dataset original `framingham.csv` |
+
+## Configuración del entorno (Windows + Git Bash)
+
+Requisito: Python 3 instalado desde python.org, con la opción "Add python.exe to PATH" marcada.
+
+```bash
+# 1. Clonar el repo (solo la primera vez)
+git clone https://github.com/ignaciopenap/proyecto-grupo3-mcdi501.git
+cd proyecto-grupo3-mcdi501
+
+# 2. Crear el entorno virtual (solo la primera vez)
+py -m venv .venv            # si "py" no existe: python -m venv .venv
+
+# 3. Activar el entorno (cada vez que abras una terminal)
+source .venv/Scripts/activate   # en macOS/Linux: source .venv/bin/activate
+
+# 4. Instalar dependencias
+python -m pip install -r requirements.txt
+```
+
+Sabrás que el entorno está activo porque aparece `(.venv)` en el prompt. Para salir: `deactivate`.
+
+### Actualizar tu copia local
+```bash
+git pull origin main
+```
+
+### Problemas comunes
+- `pip: command not found`: usa `python -m pip` en vez de `pip`.
+- `py: command not found`: usa `python`. Si tampoco existe, reinstala Python marcando "Add to PATH" y reabre Git Bash.
